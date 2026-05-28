@@ -91,7 +91,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { Plus, Eye, Edit, Delete } from '@element-plus/icons-vue'
 import { questionApi } from '../api/question'
 import QuestionForm from './QuestionForm.vue'
