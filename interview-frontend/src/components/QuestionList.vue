@@ -115,7 +115,7 @@ export default {
     Delete,
     QuestionForm
   },
-  emits: ['view-detail', 'edit-question', 'delete-question'],
+  emits: ['view-detail', 'edit-question'],
   data() {
     return {
       questions: [],

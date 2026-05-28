@@ -47,6 +47,18 @@ springdoc:
     enabled: true
   show-actuator: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+  health:
+    redis:
+      enabled: true
+
 logging:
   path: ${LOG_PATH:./logs}
   level:

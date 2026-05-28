@@ -1,0 +1,16 @@
+target/
+.mvn/
+.git/
+.gitignore
+*.md
+*.log
+*.iml
+.idea/
+.vscode/
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar

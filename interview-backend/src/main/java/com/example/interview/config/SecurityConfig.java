@@ -11,11 +11,13 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfig {
 
-    private static final String[] SWAGGER_WHITELIST = {
-            "/swagger-ui/**",
-            "/v3/api-docs/**",
-            "/swagger-resources/**",
-            "/swagger-resources"
+    private static final String[] PUBLIC_WHITELIST = {
+        "/swagger-ui/**",
+        "/v3/api-docs/**",
+        "/swagger-resources/**",
+        "/swagger-resources",
+        "/actuator/**",
+        "/api/questions/**"
     };
 
     @Bean
@@ -35,8 +37,7 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/questions/**").permitAll()
-                .requestMatchers(SWAGGER_WHITELIST).permitAll()
+                .requestMatchers(PUBLIC_WHITELIST).permitAll()
                 .requestMatchers("/api/crawler/**").authenticated()
                 .anyRequest().authenticated()
             );

@@ -34,7 +34,6 @@
 </template>
 
 <script>
-import { ref } from 'vue'
 import QuestionList from './components/QuestionList.vue'
 import QuestionDetail from './components/QuestionDetail.vue'
 import QuestionForm from './components/QuestionForm.vue'
@@ -74,8 +73,6 @@ export default {
     handleQuestionUpdated() {
       this.showDetail = false
       this.selectedQuestion = null
-    },
-    handleDelete() {
     }
   }
 }
