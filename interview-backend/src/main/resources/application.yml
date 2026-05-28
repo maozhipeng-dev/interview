@@ -59,12 +59,19 @@ management:
     redis:
       enabled: true
 
+ai:
+    bailian:
+        api-key: ${BAILIAN_API_KEY:}
+        model: ${BAILIAN_MODEL:qwen-turbo}
+        temperature: ${BAILIAN_TEMPERATURE:0.7}
+        max-tokens: ${BAILIAN_MAX_TOKENS:2000}
+
 logging:
-  path: ${LOG_PATH:./logs}
-  level:
-    root: ${LOG_LEVEL:INFO}
-    com.example.interview: ${LOG_LEVEL:DEBUG}
-    org.hibernate.SQL: ${LOG_LEVEL:DEBUG}
+    path: ${LOG_PATH:./logs}
+    level:
+        root: ${LOG_LEVEL:INFO}
+        com.example.interview: ${LOG_LEVEL:DEBUG}
+        org.hibernate.SQL: ${LOG_LEVEL:DEBUG}
 
 ---
 spring:
