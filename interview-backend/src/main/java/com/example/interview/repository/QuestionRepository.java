@@ -20,4 +20,6 @@ public interface QuestionRepository extends JpaRepository<Question, Long> {
     List<Question> findByCategoryAndIsActiveTrue(String category);
 
     List<Question> findByTagsContaining(String tag);
+
+    boolean existsByTitle(String title);
 }

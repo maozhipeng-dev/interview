@@ -33,4 +33,10 @@ public class Question {
 
     @Column(nullable = false)
     private Boolean isActive = true;
+
+    @Column(length = 255)
+    private String sourceUrl;
+
+    @Column(length = 100)
+    private String sourceName;
 }
