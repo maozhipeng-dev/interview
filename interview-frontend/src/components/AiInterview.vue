@@ -65,16 +65,16 @@
         </div>
 
         <div v-if="interviewSuggestions" class="suggestions-card">
-          <el-alert type="info" :closable="false">
-            <template #title>
-              <span class="suggestions-title">
-                <el-icon><Lightbulb /></el-icon>
-                面试建议
-              </span>
-            </template>
-            {{ interviewSuggestions }}
-          </el-alert>
-        </div>
+      <el-alert type="info" :closable="false">
+        <template #title>
+          <span class="suggestions-title">
+            <el-icon><ReadingLamp /></el-icon>
+            面试建议
+          </span>
+        </template>
+        {{ interviewSuggestions }}
+      </el-alert>
+    </div>
 
         <div v-if="currentQuestion" class="question-card">
           <div class="question-meta">
@@ -186,7 +186,7 @@ import {
   Promotion,
   MagicStick,
   Document,
-  Lightbulb,
+  ReadingLamp,
   Odometer,
   View,
   Check,
@@ -205,7 +205,7 @@ export default {
     Promotion,
     MagicStick,
     Document,
-    Lightbulb,
+    ReadingLamp,
     Odometer,
     View,
     Check,

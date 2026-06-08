@@ -62,7 +62,7 @@
         </div>
         <div class="card-footer">
           <el-button size="small" @click="$emit('view-detail', question)">
-            <el-icon><Eye /></el-icon>
+            <el-icon><View /></el-icon>
             查看详情
           </el-button>
           <el-button size="small" type="primary" @click="$emit('edit-question', question)">
@@ -102,7 +102,7 @@
 
 <script>
 import { ElMessage, ElMessageBox } from 'element-plus'
-import { Plus, Eye, Edit, Delete } from '@element-plus/icons-vue'
+import { Plus, View, Edit, Delete } from '@element-plus/icons-vue'
 import { questionApi } from '../api/question'
 import QuestionForm from './QuestionForm.vue'
 
@@ -110,7 +110,7 @@ export default {
   name: 'QuestionList',
   components: {
     Plus,
-    Eye,
+    View,
     Edit,
     Delete,
     QuestionForm
